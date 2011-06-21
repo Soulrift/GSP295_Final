@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectName>GSP295_Final</ProjectName>
+    <ProjectGuid>{469C164A-05C8-4F59-AB3C-9EDD86B2A2A1}</ProjectGuid>
+    <RootNamespace>MovingObjects</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>DirectXInclude;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>DirectXLib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Algo\AStar.cpp" />
+    <ClCompile Include="Algo\Edge.cpp" />
+    <ClCompile Include="Algo\Graph.cpp" />
+    <ClCompile Include="Algo\Node.cpp" />
+    <ClCompile Include="Math\Vector3.cpp" />
+    <ClCompile Include="Messager\Messager.cpp" />
+    <ClCompile Include="MyGameWorld.cpp" />
+    <ClCompile Include="Graphics\Avatar.cpp" />
+    <ClCompile Include="Graphics\d3dApp.cpp" />
+    <ClCompile Include="Graphics\d3dUtil.cpp" />
+    <ClCompile Include="Graphics\DirectInput.cpp" />
+    <ClCompile Include="Graphics\DXCamera.cpp" />
+    <ClCompile Include="Graphics\DXMain.cpp" />
+    <ClCompile Include="Graphics\DXProjection.cpp" />
+    <ClCompile Include="Graphics\GameWorld.cpp" />
+    <ClCompile Include="Graphics\gspOut.cpp" />
+    <ClCompile Include="Graphics\Vertex.cpp" />
+    <ClCompile Include="Object.cpp" />
+    <ClCompile Include="ObjectBase.cpp" />
+    <ClCompile Include="ObjectManager.cpp" />
+    <ClCompile Include="States\ObjCreate.cpp" />
+    <ClCompile Include="States\ObjKill.cpp" />
+    <ClCompile Include="States\ObjPath.cpp" />
+    <ClCompile Include="Timer\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Algo\AStar.h" />
+    <ClInclude Include="Algo\Edge.h" />
+    <ClInclude Include="Algo\Graph.h" />
+    <ClInclude Include="Algo\Node.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="InstanceObject.h" />
+    <ClInclude Include="Math\Vector3.h" />
+    <ClInclude Include="Messager\Messager.h" />
+    <ClInclude Include="Messager\Telegram.h" />
+    <ClInclude Include="MyGameWorld.h" />
+    <ClInclude Include="Graphics\Avatar.h" />
+    <ClInclude Include="Graphics\d3dApp.h" />
+    <ClInclude Include="Graphics\d3dUtil.h" />
+    <ClInclude Include="Graphics\DirectInput.h" />
+    <ClInclude Include="Graphics\DXCamera.h" />
+    <ClInclude Include="Graphics\DXProjection.h" />
+    <ClInclude Include="Graphics\GameWorld.h" />
+    <ClInclude Include="Graphics\gspOut.h" />
+    <ClInclude Include="Graphics\Vertex.h" />
+    <ClInclude Include="ColorDefines.h" />
+    <ClInclude Include="Object.h" />
+    <ClInclude Include="ObjectBase.h" />
+    <ClInclude Include="ObjectManager.h" />
+    <ClInclude Include="States\ObjCreate.h" />
+    <ClInclude Include="States\ObjKill.h" />
+    <ClInclude Include="States\ObjPath.h" />
+    <ClInclude Include="States\State.h" />
+    <ClInclude Include="States\StateMachine.h" />
+    <ClInclude Include="Timer\Timer.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
